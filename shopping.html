@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista della Spesa - Piano Alimentare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Torna al Menu</a>
+        
+        <h1>Lista della Spesa</h1>
+        
+        <div class="shopping-list-container">
+            <div id="selected-meals">
+                <h2>Pasti Selezionati</h2>
+                <ul id="meals-list">
+                    <!-- Meals will be inserted here by JavaScript -->
+                </ul>
+            </div>
+
+            <div id="ingredients-list">
+                <h2>Ingredienti da Acquistare</h2>
+                <ul id="shopping-items">
+                    <!-- Shopping items will be inserted here by JavaScript -->
+                </ul>
+            </div>
+
+            <button id="clear-list" class="clear-button">Svuota Lista</button>
+        </div>
+    </div>
+
+    <script src="shopping.js"></script>
+</body>
+</html>

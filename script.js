@@ -161,6 +161,18 @@ function showMealDetails(meal) {
 
     // Display modal
     modal.style.display = 'block';
+
+    // Add shopping cart button if it doesn't exist
+    let cartButton = document.querySelector('.add-to-cart-button');
+    if (!cartButton) {
+        cartButton = document.createElement('button');
+        cartButton.className = 'add-to-cart-button';
+        cartButton.textContent = 'Invia alla lista spesa';
+        document.querySelector('.modal-content').appendChild(cartButton);
+    }
+
+    // Update click handler
+    cartButton.onclick = () => addToShoppingList(currentMeal, currentServings);
 }
 
 function updateMealDetails() {
@@ -243,4 +255,38 @@ window.addEventListener('click', (event) => {
 // Helper Function to Capitalize First Letter
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function addToShoppingList(meal, servings) {
+    // Get existing shopping list
+    let shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+    let shoppingListMeals = JSON.parse(localStorage.getItem('shoppingListMeals')) || [];
+
+    // Add meal to meals list
+    const mealEntry = {
+        name: meal.mealName,
+        servings: servings
+    };
+
+    // Check if meal already exists
+    const existingMealIndex = shoppingListMeals.findIndex(m => m.name === meal.mealName);
+    if (existingMealIndex !== -1) {
+        shoppingListMeals[existingMealIndex].servings = servings;
+    } else {
+        shoppingListMeals.push(mealEntry);
+    }
+
+    // Add ingredients with adjusted quantities
+    meal.ingredients.forEach(ingredient => {
+        const adjustedIngredient = adjustIngredientQuantity(ingredient, servings);
+        if (!shoppingList.includes(adjustedIngredient)) {
+            shoppingList.push(adjustedIngredient);
+        }
+    });
+
+    // Save to localStorage
+    localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+    localStorage.setItem('shoppingListMeals', JSON.stringify(shoppingListMeals));
+
+    alert('Ingredienti aggiunti alla lista della spesa!');
 }

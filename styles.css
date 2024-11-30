@@ -105,9 +105,10 @@ header {
     width: 300px; /* Fixed width for the image container */
     height: 300px; /* Same as width to make it square */
     flex-shrink: 0; /* Prevent the image from shrinking */
-    display: flex; /* Add this line */
-    align-items: center; /* Add this line */
-    justify-content: center; /* Add this line */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center; /* This will center the image container vertically */
 }
 
 #meal-image {
@@ -146,16 +147,20 @@ header {
     display: flex;
     flex-direction: column;
     max-width: 800px; /* Adjust as needed */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Allow scrolling if content is too long */
 }
 
 .meal-details {
     display: flex;
     flex-direction: row;
+    height: 100%; /* Make it take full height of the modal content */
 }
 
 .meal-info {
     flex: 1;
     padding-right: 20px;
+    overflow-y: auto; /* Allow scrolling if content is too long */
 }
 
 #serving-control {
@@ -198,6 +203,122 @@ header {
     text-decoration: none;
 }
 
+.btn-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 0;
+    line-height: 1;
+}
+
+.btn-arrow:focus {
+    box-shadow: none;
+}
+
+/* Shopping Styles */
+.shopping-list-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #28a745;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    color: #218838;
+}
+
+#selected-meals, #ingredients-list {
+    margin-bottom: 30px;
+}
+
+#meals-list, #shopping-items {
+    list-style: none;
+    padding: 0;
+}
+
+#meals-list li, #shopping-items li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-item {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.delete-item:hover {
+    color: #c82333;
+}
+
+.clear-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+/* Shopping cart button in meal modal */
+.add-to-cart-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+}
+
+/* Shopping list link in header */
+.shopping-list-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.shopping-list-link:hover {
+    background-color: #218838;
+}
+
 @media (max-width: 768px) {
     .meal-details {
         flex-direction: column-reverse; /* Stack vertically on smaller screens */
@@ -209,3 +330,4 @@ header {
         margin-bottom: 20px;
     }
 }
+
