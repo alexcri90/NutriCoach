@@ -149,18 +149,31 @@ nextWeekButton.addEventListener('click', () => {
     }
 });
 
+let currentServings = 1;
+let currentMeal = null;
+
 // Show Meal Details in Modal
 function showMealDetails(meal) {
     console.log('Showing details for meal:', meal.mealName);
-    mealName.textContent = meal.mealName;
-    mealDescription.textContent = meal.description;
-    mealPortion.textContent = `Porzione: ${meal.portionSize}`;
+    currentMeal = meal;
+    currentServings = 1;
+    updateMealDetails();
+
+    // Display modal
+    modal.style.display = 'block';
+}
+
+function updateMealDetails() {
+    mealName.textContent = currentMeal.mealName;
+    mealDescription.textContent = currentMeal.description;
+    mealPortion.textContent = `Porzione: ${currentMeal.portionSize}`;
+    document.getElementById('serving-count').textContent = currentServings;
 
     // Add image to modal
     const mealImage = document.getElementById('meal-image');
     const mealImageContainer = document.querySelector('.meal-image-container');
-    if (meal.image) {
-        mealImage.src = meal.image;
+    if (currentMeal.image) {
+        mealImage.src = currentMeal.image;
         mealImageContainer.style.display = 'block';
     } else {
         mealImageContainer.style.display = 'none';
@@ -170,23 +183,50 @@ function showMealDetails(meal) {
     mealIngredients.innerHTML = '';
     mealNutrition.innerHTML = '';
 
-    // Populate ingredients
-    meal.ingredients.forEach(ingredient => {
+    // Populate ingredients with adjusted quantities
+    currentMeal.ingredients.forEach(ingredient => {
         const li = document.createElement('li');
-        li.textContent = ingredient;
+        li.textContent = adjustIngredientQuantity(ingredient, currentServings);
         mealIngredients.appendChild(li);
     });
 
-    // Populate nutrition
-    for (const [key, value] of Object.entries(meal.nutrition)) {
+    // Populate nutrition with adjusted values
+    for (const [key, value] of Object.entries(currentMeal.nutrition)) {
         const li = document.createElement('li');
-        li.textContent = `${capitalizeFirstLetter(key)}: ${value}`;
+        li.textContent = `${capitalizeFirstLetter(key)}: ${(value * currentServings).toFixed(1)} `; // Add space and round to one decimal
         mealNutrition.appendChild(li);
     }
-
-    // Display modal
-    modal.style.display = 'block';
 }
+
+function adjustIngredientQuantity(ingredient, servings) {
+    const regex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s(.+)$/;
+    const match = ingredient.match(regex);
+    
+    if (match) {
+        const [, quantity, unit, item] = match;
+        const adjustedQuantity = parseFloat(quantity) * servings;
+        return `${adjustedQuantity} ${unit} ${item}`; // Add a space after adjustedQuantity
+    }
+    
+    // If the ingredient doesn't match the expected format, return it unchanged
+    return ingredient;
+}
+
+function increaseServing() {
+    currentServings++;
+    updateMealDetails();
+}
+
+function decreaseServing() {
+    if (currentServings > 1) {
+        currentServings--;
+        updateMealDetails();
+    }
+}
+
+// Add event listeners for serving buttons
+document.getElementById('increase-serving').addEventListener('click', increaseServing);
+document.getElementById('decrease-serving').addEventListener('click', decreaseServing);
 
 // Close Modal
 closeButton.addEventListener('click', () => {

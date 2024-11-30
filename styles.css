@@ -105,6 +105,9 @@ header {
     width: 300px; /* Fixed width for the image container */
     height: 300px; /* Same as width to make it square */
     flex-shrink: 0; /* Prevent the image from shrinking */
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    justify-content: center; /* Add this line */
 }
 
 #meal-image {
@@ -153,6 +156,29 @@ header {
 .meal-info {
     flex: 1;
     padding-right: 20px;
+}
+
+#serving-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#serving-control button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+#serving-control span {
+    margin: 0 10px;
+}
+
+#serving-count {
+    font-weight: bold;
 }
 
 .close-button {
