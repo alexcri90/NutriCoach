@@ -55,6 +55,26 @@ header {
     margin-bottom: 10px;
 }
 
+.banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#meal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 
 .day-card {
     background-color: white;
@@ -79,6 +99,19 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+}
+
+.meal-image-container {
+    width: 300px; /* Fixed width for the image container */
+    height: 300px; /* Same as width to make it square */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+#meal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    border-radius: 8px;
 }
 
 .meal-item:hover {
@@ -107,6 +140,19 @@ header {
     width: 80%; /* Could be more or less, depending on screen size */
     border-radius: 8px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px; /* Adjust as needed */
+}
+
+.meal-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.meal-info {
+    flex: 1;
+    padding-right: 20px;
 }
 
 .close-button {
@@ -126,16 +172,14 @@ header {
     text-decoration: none;
 }
 
-@media (max-width: 600px) {
-    .controls {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .meal-details {
+        flex-direction: column-reverse; /* Stack vertically on smaller screens */
     }
 
-    .controls button {
-        margin: 5px 0;
-    }
-
-    .modal-content {
-        width: 95%;
+    .meal-image-container {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
     }
 }

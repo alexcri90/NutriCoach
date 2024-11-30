@@ -17,7 +17,8 @@
             "carbohydrates": 60,
             "fats": 5
           },
-          "portionSize": "1 ciotola"
+          "portionSize": "1 ciotola",
+          "image": "images/porridge.jpg"
         },
         "lunch": {
           "mealName": "Insalata di quinoa con verdure e feta",

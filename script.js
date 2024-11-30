@@ -154,7 +154,17 @@ function showMealDetails(meal) {
     console.log('Showing details for meal:', meal.mealName);
     mealName.textContent = meal.mealName;
     mealDescription.textContent = meal.description;
-    mealPortion.textContent = `Porzione: ${meal.portionSize}`; // Set Portion Size
+    mealPortion.textContent = `Porzione: ${meal.portionSize}`;
+
+    // Add image to modal
+    const mealImage = document.getElementById('meal-image');
+    const mealImageContainer = document.querySelector('.meal-image-container');
+    if (meal.image) {
+        mealImage.src = meal.image;
+        mealImageContainer.style.display = 'block';
+    } else {
+        mealImageContainer.style.display = 'none';
+    }
 
     // Clear previous ingredients and nutrition
     mealIngredients.innerHTML = '';
