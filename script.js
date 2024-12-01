@@ -271,18 +271,39 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// Helper function to parse ingredient string into quantity, unit, and item
+function parseIngredient(ingredientStr) {
+    const regex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s(.+)$/;
+    const match = ingredientStr.match(regex);
+    
+    if (match) {
+        const [, quantity, unit, item] = match;
+        return {
+            quantity: parseFloat(quantity),
+            unit,
+            item: item.toLowerCase().trim()
+        };
+    }
+    return null;
+}
+
+// Helper function to format ingredient object back to string
+function formatIngredient(ingredient) {
+    return `${ingredient.quantity}${ingredient.unit} ${ingredient.item}`;
+}
+
+// Updated addToShoppingList function
 function addToShoppingList(meal, servings) {
     // Get existing shopping list
     let shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
     let shoppingListMeals = JSON.parse(localStorage.getItem('shoppingListMeals')) || [];
 
-    // Add meal to meals list
+    // Add or update meal in meals list
     const mealEntry = {
         name: meal.mealName,
         servings: servings
     };
 
-    // Check if meal already exists
     const existingMealIndex = shoppingListMeals.findIndex(m => m.name === meal.mealName);
     if (existingMealIndex !== -1) {
         shoppingListMeals[existingMealIndex].servings = servings;
@@ -290,17 +311,61 @@ function addToShoppingList(meal, servings) {
         shoppingListMeals.push(mealEntry);
     }
 
-    // Add ingredients with adjusted quantities
+    // Process each ingredient
     meal.ingredients.forEach(ingredient => {
         const adjustedIngredient = adjustIngredientQuantity(ingredient, servings);
-        if (!shoppingList.includes(adjustedIngredient)) {
-            shoppingList.push(adjustedIngredient);
+        const parsedNew = parseIngredient(adjustedIngredient);
+        
+        if (parsedNew) {
+            // Look for matching ingredient in existing list
+            let found = false;
+            let updatedList = shoppingList.map(existingIngredient => {
+                const parsedExisting = parseIngredient(existingIngredient);
+                if (parsedExisting && 
+                    parsedExisting.unit === parsedNew.unit && 
+                    parsedExisting.item === parsedNew.item) {
+                    // Merge quantities
+                    found = true;
+                    return formatIngredient({
+                        quantity: parsedExisting.quantity + parsedNew.quantity,
+                        unit: parsedExisting.unit,
+                        item: parsedExisting.item
+                    });
+                }
+                return existingIngredient;
+            });
+
+            // If ingredient wasn't found and merged, add it as new
+            if (!found) {
+                updatedList.push(adjustedIngredient);
+            }
+            
+            shoppingList = updatedList;
+        } else {
+            // For ingredients that don't match the expected format
+            if (!shoppingList.includes(adjustedIngredient)) {
+                shoppingList.push(adjustedIngredient);
+            }
         }
     });
 
-    // Save to localStorage
+    // Save updated lists to localStorage
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
     localStorage.setItem('shoppingListMeals', JSON.stringify(shoppingListMeals));
 
     alert('Ingredienti aggiunti alla lista della spesa!');
+}
+
+// Helper function to adjust ingredient quantity (existing function)
+function adjustIngredientQuantity(ingredient, servings) {
+    const regex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s(.+)$/;
+    const match = ingredient.match(regex);
+    
+    if (match) {
+        const [, quantity, unit, item] = match;
+        const adjustedQuantity = parseFloat(quantity) * servings;
+        return `${adjustedQuantity}${unit} ${item}`;
+    }
+    
+    return ingredient;
 }
