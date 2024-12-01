@@ -314,15 +314,35 @@ header {
     background-color: #28a745;
     color: white;
     text-decoration: none;
-    border-radius: 25px; /* More rounded corners for better mobile aesthetics */
+    border-radius: 25px;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
 }
 
 .shopping-list-link:hover {
     background-color: #218838;
     transform: translateY(-2px);
+    text-decoration: none;
+    color: white;
+}
+
+.shopping-list-link.hidden {
+    opacity: 0;
+    pointer-events: none;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* More rounded corners for better mobile aesthetics */
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {

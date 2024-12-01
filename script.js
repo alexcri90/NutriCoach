@@ -159,6 +159,12 @@ function showMealDetails(meal) {
     currentServings = 1;
     updateMealDetails();
 
+    // Hide shopping list link
+    const shoppingListLink = document.querySelector('.shopping-list-link');
+    if (shoppingListLink) {
+        shoppingListLink.classList.add('hidden');
+    }
+
     // Display modal
     modal.style.display = 'block';
 
@@ -243,12 +249,20 @@ document.getElementById('decrease-serving').addEventListener('click', decreaseSe
 // Close Modal
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
+    const shoppingListLink = document.querySelector('.shopping-list-link');
+    if (shoppingListLink) {
+        shoppingListLink.classList.remove('hidden');
+    }
 });
 
 // Close modal when clicking outside the modal content
 window.addEventListener('click', (event) => {
     if (event.target == modal) {
         modal.style.display = 'none';
+        const shoppingListLink = document.querySelector('.shopping-list-link');
+        if (shoppingListLink) {
+            shoppingListLink.classList.remove('hidden');
+        }
     }
 });
 
