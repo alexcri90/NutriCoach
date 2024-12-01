@@ -190,10 +190,13 @@ function updateMealDetails() {
     document.getElementById('serving-count').textContent = currentServings;
 
     // Add image to modal
-    const mealImage = document.getElementById('meal-image');
     const mealImageContainer = document.querySelector('.meal-image-container');
     if (currentMeal.image) {
+        const mealImage = document.createElement('img');
+        mealImage.id = 'meal-image';
         mealImage.src = currentMeal.image;
+        mealImageContainer.innerHTML = ''; // Clear previous image
+        mealImageContainer.appendChild(mealImage);
         mealImageContainer.style.display = 'block';
     } else {
         mealImageContainer.style.display = 'none';
@@ -203,32 +206,67 @@ function updateMealDetails() {
     mealIngredients.innerHTML = '';
     mealNutrition.innerHTML = '';
 
+    // Debug log
+    console.log('Current servings:', currentServings);
+    
     // Populate ingredients with adjusted quantities
     currentMeal.ingredients.forEach(ingredient => {
+        console.log('Processing ingredient:', ingredient); // Debug log
+        const adjustedIngredient = adjustIngredientQuantity(ingredient, currentServings);
+        console.log('Adjusted ingredient:', adjustedIngredient); // Debug log
         const li = document.createElement('li');
-        li.textContent = adjustIngredientQuantity(ingredient, currentServings);
+        li.textContent = adjustedIngredient;
         mealIngredients.appendChild(li);
     });
 
     // Populate nutrition with adjusted values
     for (const [key, value] of Object.entries(currentMeal.nutrition)) {
         const li = document.createElement('li');
-        li.textContent = `${capitalizeFirstLetter(key)}: ${(value * currentServings).toFixed(1)} `; // Add space and round to one decimal
+        li.textContent = `${capitalizeFirstLetter(key)}: ${(value * currentServings).toFixed(1)}`;
         mealNutrition.appendChild(li);
     }
 }
 
 function adjustIngredientQuantity(ingredient, servings) {
-    const regex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s(.+)$/;
-    const match = ingredient.match(regex);
+    // Special case for eggs and other countable items
+    const eggsRegex = /^(\d+)\s+(uova|uovo|egg[is]?)(\s+.+)?$/i;
+    const eggMatch = ingredient.match(eggsRegex);
     
+    if (eggMatch) {
+        const quantity = parseInt(eggMatch[1]) * servings;
+        const item = quantity === 1 ? 'uovo' : 'uova';
+        const rest = eggMatch[3] || '';
+        return `${quantity} ${item}${rest}`;
+    }
+
+    // Handle Italian measurement terms with proper spacing
+    const italianUnitsRegex = /^(\d+(?:\.\d+)?)\s*(cucchiaino|cucchiaini|cucchiaio|cucchiai)\s+(.+)$/i;
+    const italianMatch = ingredient.match(italianUnitsRegex);
+    if (italianMatch) {
+        const quantity = parseFloat(italianMatch[1]) * servings;
+        let unit = italianMatch[2].toLowerCase();
+        
+        // Handle pluralization of common Italian measurements
+        if (quantity > 1) {
+            if (unit === 'cucchiaino') unit = 'cucchiaini';
+            if (unit === 'cucchiaio') unit = 'cucchiai';
+        } else {
+            if (unit === 'cucchiaini') unit = 'cucchiaino';
+            if (unit === 'cucchiai') unit = 'cucchiaio';
+        }
+        
+        return `${quantity} ${unit} ${italianMatch[3]}`;
+    }
+
+    // Standard measurements (g, ml, etc.)
+    const standardRegex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s+(.+)$/;
+    const match = ingredient.match(standardRegex);
     if (match) {
-        const [, quantity, unit, item] = match;
-        const adjustedQuantity = parseFloat(quantity) * servings;
-        return `${adjustedQuantity} ${unit} ${item}`; // Add a space after adjustedQuantity
+        const quantity = parseFloat(match[1]) * servings;
+        return `${quantity} ${match[2]} ${match[3]}`;
     }
     
-    // If the ingredient doesn't match the expected format, return it unchanged
+    // If no pattern matches, return the original ingredient
     return ingredient;
 }
 
@@ -360,15 +398,45 @@ function addToShoppingList(meal, servings) {
 
 // Helper function to adjust ingredient quantity (existing function)
 function adjustIngredientQuantity(ingredient, servings) {
-    const regex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s(.+)$/;
-    const match = ingredient.match(regex);
+    // Special case for eggs and other countable items
+    const eggsRegex = /^(\d+)\s+(uova|uovo|egg[is]?)(\s+.+)?$/i;
+    const eggMatch = ingredient.match(eggsRegex);
     
+    if (eggMatch) {
+        const quantity = parseInt(eggMatch[1]) * servings;
+        const item = quantity === 1 ? 'uovo' : 'uova';
+        const rest = eggMatch[3] || '';
+        return `${quantity} ${item}${rest}`;
+    }
+
+    // Handle Italian measurement terms with proper spacing
+    const italianUnitsRegex = /^(\d+(?:\.\d+)?)\s*(cucchiaino|cucchiaini|cucchiaio|cucchiai)\s+(.+)$/i;
+    const italianMatch = ingredient.match(italianUnitsRegex);
+    if (italianMatch) {
+        const quantity = parseFloat(italianMatch[1]) * servings;
+        let unit = italianMatch[2].toLowerCase();
+        
+        // Handle pluralization of common Italian measurements
+        if (quantity > 1) {
+            if (unit === 'cucchiaino') unit = 'cucchiaini';
+            if (unit === 'cucchiaio') unit = 'cucchiai';
+        } else {
+            if (unit === 'cucchiaini') unit = 'cucchiaino';
+            if (unit === 'cucchiai') unit = 'cucchiaio';
+        }
+        
+        return `${quantity} ${unit} ${italianMatch[3]}`;
+    }
+
+    // Standard measurements (g, ml, etc.)
+    const standardRegex = /^(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s+(.+)$/;
+    const match = ingredient.match(standardRegex);
     if (match) {
-        const [, quantity, unit, item] = match;
-        const adjustedQuantity = parseFloat(quantity) * servings;
-        return `${adjustedQuantity}${unit} ${item}`;
+        const quantity = parseFloat(match[1]) * servings;
+        return `${quantity} ${match[2]} ${match[3]}`;
     }
     
+    // If no pattern matches, return the original ingredient
     return ingredient;
 }
 
