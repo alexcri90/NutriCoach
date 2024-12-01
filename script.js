@@ -72,6 +72,7 @@ fetch('meals.json')
                 };
             });
         renderMealPlan();
+        updateNavigationButtons();
     })
     .catch(error => {
         console.error('Error fetching meal data:', error);
@@ -105,6 +106,7 @@ function renderMealPlan() {
 
     // Update current week display
     currentWeekDisplay.textContent = `Week ${week.weekNumber}`;
+    updateNavigationButtons();
     console.log('Current Week Data:', week);
 
     // Iterate through days
@@ -368,4 +370,16 @@ function adjustIngredientQuantity(ingredient, servings) {
     }
     
     return ingredient;
+}
+
+// Add this function after the other function declarations
+function updateNavigationButtons() {
+    const hasMultipleWeeks = weeksArray.length > 1;
+    const prevButton = document.querySelector('.controls button:first-child');
+    const nextButton = document.querySelector('.controls button:last-child');
+    
+    if (prevButton && nextButton) {
+        prevButton.style.display = hasMultipleWeeks ? 'block' : 'none';
+        nextButton.style.display = hasMultipleWeeks ? 'block' : 'none';
+    }
 }

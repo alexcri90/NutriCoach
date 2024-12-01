@@ -2,482 +2,19 @@
   "week1": {
     "day1": {
       "breakfast": {
-        "mealName": "Porridge d'avena con frutta fresca e miele",
-        "description": "Porridge caldo preparato con avena integrale, guarnito con frutta fresca e un filo di miele.",
+        "mealName": "Porridge proteico di avena con frutta secca",
+        "description": "Porridge cremoso preparato con fiocchi d'avena e proteine in polvere, arricchito con frutta secca e cannella",
         "ingredients": [
           "50g fiocchi d'avena",
-          "200ml latte scremato",
-          "1 banana a fette",
-          "1 cucchiaino di miele",
-          "1 pizzico di cannella"
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 12,
-          "carbohydrates": 60,
-          "fats": 5
-        },
-        "portionSize": "1 ciotola",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Insalata di quinoa con verdure e feta",
-        "description": "Quinoa cotta mescolata con verdure fresche e formaggio feta sbriciolato.",
-        "ingredients": [
-          "70g quinoa",
-          "100g pomodorini",
-          "50g cetrioli",
-          "30g formaggio feta",
-          "Foglie di menta fresca",
-          "Succo di mezzo limone",
-          "1 cucchiaio di olio d'oliva",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 450,
-          "protein": 15,
-          "carbohydrates": 55,
-          "fats": 18
-        },
-        "portionSize": "1 piatto",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Salmone al forno con asparagi",
-        "description": "Filetto di salmone cotto al forno servito con asparagi al vapore.",
-        "ingredients": [
-          "150g filetto di salmone",
-          "200g asparagi",
-          "1 spicchio d'aglio",
-          "Succo di mezzo limone",
-          "1 cucchiaino di olio d'oliva",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 35,
-          "carbohydrates": 10,
-          "fats": 35
-        },
-        "portionSize": "1 piatto",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Yogurt greco con miele e noci",
-        "description": "Yogurt greco cremoso arricchito con un filo di miele e noci tritate.",
-        "ingredients": [
-          "150g yogurt greco 0% grassi",
-          "1 cucchiaino di miele",
-          "15g noci tritate"
-        ],
-        "nutrition": {
-          "calories": 200,
-          "protein": 15,
-          "carbohydrates": 15,
-          "fats": 9
-        },
-        "portionSize": "1 coppetta",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day2": {
-      "breakfast": {
-        "mealName": "Toast integrale con avocado e uova strapazzate",
-        "description": "Pane integrale tostato guarnito con avocado schiacciato e uova strapazzate.",
-        "ingredients": [
-          "2 fette di pane integrale",
-          "1/2 avocado maturo",
-          "2 uova",
-          "Sale e pepe q.b.",
-          "1 cucchiaino di olio d'oliva"
-        ],
-        "nutrition": {
-          "calories": 400,
-          "protein": 18,
-          "carbohydrates": 30,
-          "fats": 22
-        },
-        "portionSize": "1 piatto",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Pasta integrale al pesto di basilico",
-        "description": "Pasta integrale condita con pesto di basilico fatto in casa.",
-        "ingredients": [
-          "80g pasta integrale",
-          "2 cucchiai di pesto di basilico",
-          "10g pinoli",
-          "Parmigiano Reggiano grattugiato q.b."
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 15,
-          "carbohydrates": 65,
-          "fats": 20
-        },
-        "portionSize": "1 piatto",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Pollo alla griglia con verdure miste",
-        "description": "Petto di pollo alla griglia servito con verdure assortite saltate in padella.",
-        "ingredients": [
-          "150g petto di pollo",
-          "200g verdure miste (peperoni, zucchine, melanzane)",
-          "1 cucchiaino di olio d'oliva",
-          "Erbe aromatiche a piacere",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 450,
-          "protein": 40,
-          "carbohydrates": 15,
-          "fats": 20
-        },
-        "portionSize": "1 piatto",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Frutta fresca di stagione",
-        "description": "Un assortimento di frutta fresca disponibile in stagione.",
-        "ingredients": [
-          "1 mela o 1 pera o 2 kiwi"
-        ],
-        "nutrition": {
-          "calories": 100,
-          "protein": 1,
-          "carbohydrates": 25,
-          "fats": 0
-        },
-        "portionSize": "1 pezzo di frutta",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day3": {
-      "breakfast": {
-        "mealName": "Frullato proteico alla banana e burro di arachidi",
-        "description": "Frullato cremoso a base di banana, burro di arachidi e latte.",
-        "ingredients": [
-          "1 banana",
-          "1 cucchiaio di burro di arachidi",
-          "200ml latte scremato",
-          "1 misurino di proteine in polvere (facoltativo)",
-          "Ghiaccio q.b."
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 20,
-          "carbohydrates": 40,
-          "fats": 12
-        },
-        "portionSize": "1 bicchiere grande",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Zuppa di lenticchie e verdure",
-        "description": "Zuppa calda e nutriente con lenticchie e verdure miste.",
-        "ingredients": [
-          "80g lenticchie secche",
-          "100g carote",
-          "100g sedano",
-          "50g cipolla",
-          "1 spicchio d'aglio",
-          "Brodo vegetale q.b.",
-          "1 cucchiaino di olio d'oliva",
-          "Spezie a piacere"
-        ],
-        "nutrition": {
-          "calories": 400,
-          "protein": 20,
-          "carbohydrates": 60,
-          "fats": 5
-        },
-        "portionSize": "1 ciotola grande",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Spiedini di gamberi e verdure",
-        "description": "Gamberi e verdure grigliati su spiedini, serviti con riso basmati.",
-        "ingredients": [
-          "150g gamberi puliti",
-          "100g peperoni",
-          "100g zucchine",
-          "80g riso basmati",
-          "1 cucchiaino di olio d'oliva",
-          "Succo di limone",
-          "Spezie a piacere"
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 30,
-          "carbohydrates": 65,
-          "fats": 10
-        },
-        "portionSize": "2 spiedini e riso",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Carote baby con hummus",
-        "description": "Carotine fresche servite con hummus di ceci.",
-        "ingredients": [
-          "100g carote baby",
-          "50g hummus"
-        ],
-        "nutrition": {
-          "calories": 150,
-          "protein": 5,
-          "carbohydrates": 15,
-          "fats": 8
-        },
-        "portionSize": "1 piattino",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day4": {
-      "breakfast": {
-        "mealName": "Yogurt greco con muesli e frutti di bosco",
-        "description": "Yogurt ricco di proteine con muesli croccante e frutti di bosco freschi.",
-        "ingredients": [
-          "150g yogurt greco 0% grassi",
-          "40g muesli",
-          "100g frutti di bosco misti",
+          "30g proteine in polvere gusto vaniglia",
+          "200ml latte di mandorla",
+          "15g mandorle affettate",
+          "1 cucchiaino di cannella",
           "1 cucchiaino di miele"
         ],
         "nutrition": {
-          "calories": 350,
-          "protein": 18,
-          "carbohydrates": 50,
-          "fats": 6
-        },
-        "portionSize": "1 ciotola",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Panino integrale con tacchino e avocado",
-        "description": "Pane integrale farcito con fette di tacchino, avocado e insalata.",
-        "ingredients": [
-          "2 fette di pane integrale",
-          "100g fette di tacchino arrosto",
-          "1/2 avocado",
-          "Foglie di lattuga",
-          "Pomodoro a fette",
-          "1 cucchiaino di maionese light"
-        ],
-        "nutrition": {
-          "calories": 450,
-          "protein": 25,
-          "carbohydrates": 40,
-          "fats": 20
-        },
-        "portionSize": "1 panino",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Stir-fry di manzo magro e verdure",
-        "description": "Straccetti di manzo saltati in padella con verdure miste e salsa di soia a basso contenuto di sodio.",
-        "ingredients": [
-          "150g manzo magro a straccetti",
-          "200g verdure miste (broccoli, carote, peperoni)",
-          "1 cucchiaio di salsa di soia a basso sodio",
-          "1 spicchio d'aglio",
-          "1 cucchiaino di olio di sesamo",
-          "Zenzero grattugiato"
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 35,
-          "carbohydrates": 25,
-          "fats": 25
-        },
-        "portionSize": "1 piatto",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Mandorle tostate",
-        "description": "Una manciata di mandorle tostate non salate.",
-        "ingredients": [
-          "30g mandorle non salate"
-        ],
-        "nutrition": {
-          "calories": 170,
-          "protein": 6,
-          "carbohydrates": 6,
-          "fats": 15
-        },
-        "portionSize": "1 manciata",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day5": {
-      "breakfast": {
-        "mealName": "Pancake proteici con sciroppo d'acero",
-        "description": "Pancake soffici preparati con farina integrale e proteine in polvere, serviti con sciroppo d'acero.",
-        "ingredients": [
-          "50g farina integrale",
-          "1 uovo",
-          "30g proteine in polvere (facoltativo)",
-          "100ml latte scremato",
-          "1 cucchiaino di lievito per dolci",
-          "Sciroppo d'acero q.b."
-        ],
-        "nutrition": {
-          "calories": 400,
-          "protein": 25,
-          "carbohydrates": 50,
-          "fats": 10
-        },
-        "portionSize": "3 pancake",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Insalata di couscous con ceci e verdure",
-        "description": "Couscous integrale mescolato con ceci, verdure fresche e condimento leggero.",
-        "ingredients": [
-          "70g couscous integrale",
-          "100g ceci cotti",
-          "50g pomodorini",
-          "50g cetrioli",
-          "Prezzemolo fresco",
-          "Succo di limone",
-          "1 cucchiaio di olio d'oliva",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 450,
-          "protein": 15,
-          "carbohydrates": 70,
-          "fats": 12
-        },
-        "portionSize": "1 piatto",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Omelette con spinaci e formaggio",
-        "description": "Omelette soffice ripiena di spinaci freschi e formaggio light.",
-        "ingredients": [
-          "3 uova",
-          "100g spinaci freschi",
-          "30g formaggio light grattugiato",
-          "1 cucchiaino di olio d'oliva",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 25,
-          "carbohydrates": 5,
-          "fats": 25
-        },
-        "portionSize": "1 omelette",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Smoothie verde",
-        "description": "Bevanda dissetante a base di spinaci, mela verde e zenzero.",
-        "ingredients": [
-          "Handful di spinaci",
-          "1 mela verde",
-          "Succo di mezzo limone",
-          "1 pezzetto di zenzero fresco",
-          "Acqua q.b.",
-          "Ghiaccio q.b."
-        ],
-        "nutrition": {
-          "calories": 100,
-          "protein": 2,
-          "carbohydrates": 22,
-          "fats": 0
-        },
-        "portionSize": "1 bicchiere",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day6": {
-      "breakfast": {
-        "mealName": "Fette biscottate con marmellata senza zucchero",
-        "description": "Fette biscottate integrali spalmate con marmellata light.",
-        "ingredients": [
-          "4 fette biscottate integrali",
-          "2 cucchiai di marmellata senza zucchero",
-          "1 tazza di t\u00c3\u00a8 verde"
-        ],
-        "nutrition": {
-          "calories": 250,
-          "protein": 5,
-          "carbohydrates": 50,
-          "fats": 2
-        },
-        "portionSize": "1 piatto",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Sushi bowl con riso integrale",
-        "description": "Ciotola di riso integrale con salmone affumicato, avocado e alghe nori.",
-        "ingredients": [
-          "80g riso integrale",
-          "50g salmone affumicato",
-          "1/2 avocado",
-          "1 foglio di alga nori sbriciolato",
-          "Semi di sesamo",
-          "Salsa di soia a basso sodio"
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 20,
-          "carbohydrates": 60,
-          "fats": 20
-        },
-        "portionSize": "1 ciotola",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Pasta di legumi con sugo di pomodoro",
-        "description": "Pasta a base di legumi servita con sugo di pomodoro fresco e basilico.",
-        "ingredients": [
-          "80g pasta di legumi (lenticchie o ceci)",
-          "100g passata di pomodoro",
-          "1 spicchio d'aglio",
-          "Foglie di basilico fresco",
-          "1 cucchiaino di olio d'oliva",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 400,
-          "protein": 25,
-          "carbohydrates": 50,
-          "fats": 8
-        },
-        "portionSize": "1 piatto",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Crackers integrali con hummus",
-        "description": "Crackers croccanti serviti con hummus cremoso.",
-        "ingredients": [
-          "30g crackers integrali",
-          "50g hummus"
-        ],
-        "nutrition": {
-          "calories": 200,
-          "protein": 6,
-          "carbohydrates": 25,
-          "fats": 8
-        },
-        "portionSize": "1 piattino",
-        "image": "images/snacks.jpg"
-      }
-    },
-    "day7": {
-      "breakfast": {
-        "mealName": "Granola fatta in casa con yogurt",
-        "description": "Granola croccante servita con yogurt naturale e miele.",
-        "ingredients": [
-          "40g granola fatta in casa",
-          "150g yogurt naturale",
-          "1 cucchiaino di miele"
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 12,
+          "calories": 380,
+          "protein": 28,
           "carbohydrates": 45,
           "fats": 12
         },
@@ -485,158 +22,62 @@
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Wrap integrale con pollo e verdure",
-        "description": "Tortilla integrale farcita con pollo grigliato, verdure fresche e salsa allo yogurt.",
+        "mealName": "Bowl di riso integrale con salmone e verdure",
+        "description": "Ciotola di riso integrale con salmone scottato, verdure al vapore e salsa di soia",
         "ingredients": [
-          "1 tortilla integrale",
-          "100g pollo grigliato a fette",
-          "Foglie di lattuga",
-          "Pomodoro a fette",
-          "Cipolla rossa a fette",
-          "2 cucchiai di salsa allo yogurt"
-        ],
-        "nutrition": {
-          "calories": 450,
-          "protein": 30,
-          "carbohydrates": 40,
-          "fats": 18
-        },
-        "portionSize": "1 wrap",
-        "image": "images/lunch.jpg"
-      },
-      "dinner": {
-        "mealName": "Risotto ai funghi",
-        "description": "Risotto cremoso preparato con funghi misti e brodo vegetale.",
-        "ingredients": [
-          "80g riso Arborio",
-          "150g funghi misti",
-          "Brodo vegetale q.b.",
-          "1 spicchio d'aglio",
-          "1 cucchiaio di olio d'oliva",
-          "Prezzemolo fresco",
-          "Parmigiano Reggiano grattugiato q.b."
-        ],
-        "nutrition": {
-          "calories": 500,
-          "protein": 15,
-          "carbohydrates": 75,
-          "fats": 15
-        },
-        "portionSize": "1 piatto",
-        "image": "images/dinner.jpg"
-      },
-      "snacks": {
-        "mealName": "Barretta ai cereali",
-        "description": "Barretta energetica a base di cereali integrali e frutta secca.",
-        "ingredients": [
-          "1 barretta ai cereali integrali"
-        ],
-        "nutrition": {
-          "calories": 150,
-          "protein": 4,
-          "carbohydrates": 25,
-          "fats": 5
-        },
-        "portionSize": "1 barretta",
-        "image": "images/snacks.jpg"
-      },
-      "alternativeDinner": {
-        "mealName": "Zuppa di miso con tofu e alghe",
-        "description": "Zuppa leggera giapponese a base di miso, tofu e alghe wakame.",
-        "ingredients": [
-          "1 cucchiaio di pasta di miso",
-          "200ml acqua",
-          "50g tofu a cubetti",
-          "Alghe wakame reidratate",
-          "Cipollotto tritato"
-        ],
-        "nutrition": {
-          "calories": 200,
-          "protein": 10,
-          "carbohydrates": 15,
-          "fats": 8
-        },
-        "portionSize": "1 ciotola",
-        "image": "images/alternativeDinner.jpg"
-      }
-    }
-  },
-  "week2": {
-    "day1": {
-      "breakfast": {
-        "mealName": "Overnight oats con semi di chia e frutta",
-        "description": "Avena lasciata in ammollo durante la notte con latte e semi di chia, guarnita con frutta fresca.",
-        "ingredients": [
-          "50g fiocchi d'avena",
-          "200ml latte di mandorla",
-          "1 cucchiaio di semi di chia",
-          "100g frutta fresca (es. fragole, mirtilli)",
-          "1 cucchiaino di miele"
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 10,
-          "carbohydrates": 55,
-          "fats": 8
-        },
-        "portionSize": "1 barattolo",
-        "image": "images/breakfast.jpg"
-      },
-      "lunch": {
-        "mealName": "Insalata Nicoise leggera",
-        "description": "Insalata mista con tonno, uova sode, olive e verdure fresche.",
-        "ingredients": [
-          "100g tonno al naturale",
-          "2 uova sode",
-          "100g fagiolini lessati",
-          "Pomodorini",
-          "Olive nere",
-          "Foglie di lattuga",
-          "1 cucchiaio di olio d'oliva",
-          "Aceto balsamico",
-          "Sale e pepe q.b."
+          "80g riso integrale",
+          "150g filetto di salmone",
+          "200g mix verdure surgelate per wok",
+          "1 cucchiaino olio di sesamo",
+          "10ml salsa di soia a basso contenuto di sodio",
+          "Semi di sesamo q.b."
         ],
         "nutrition": {
           "calories": 450,
           "protein": 35,
-          "carbohydrates": 20,
-          "fats": 25
+          "carbohydrates": 48,
+          "fats": 15
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 bowl",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Tofu saltato con verdure e riso",
-        "description": "Cubetti di tofu saltati in padella con verdure asiatiche e riso jasmine.",
+        "mealName": "Petto di pollo alla piastra con caponata light",
+        "description": "Petto di pollo grigliato servito con caponata di verdure preparata con poco olio",
         "ingredients": [
-          "150g tofu solido",
-          "200g verdure miste (broccoli, peperoni, carote)",
-          "80g riso jasmine",
-          "1 cucchiaio di salsa di soia a basso sodio",
-          "1 cucchiaino di olio di sesamo",
-          "Aglio e zenzero"
+          "150g petto di pollo",
+          "150g melanzane",
+          "100g pomodori",
+          "50g cipolla",
+          "30g sedano",
+          "10g capperi",
+          "1 cucchiaio aceto balsamico",
+          "1 cucchiaino olio extra vergine",
+          "Basilico fresco",
+          "Sale e pepe q.b."
         ],
         "nutrition": {
-          "calories": 500,
-          "protein": 20,
-          "carbohydrates": 65,
-          "fats": 15
+          "calories": 380,
+          "protein": 42,
+          "carbohydrates": 18,
+          "fats": 14
         },
         "portionSize": "1 piatto",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Popcorn fatti in casa",
-        "description": "Popcorn leggeri preparati al microonde senza burro.",
+        "mealName": "Yogurt greco con frutti di bosco",
+        "description": "Yogurt greco magro con mix di frutti di bosco",
         "ingredients": [
-          "30g chicchi di mais per popcorn",
-          "Sale q.b."
+          "150g yogurt greco 0% grassi",
+          "100g mix frutti di bosco surgelati",
+          "1 cucchiaino di miele"
         ],
         "nutrition": {
-          "calories": 120,
-          "protein": 4,
-          "carbohydrates": 25,
-          "fats": 2
+          "calories": 150,
+          "protein": 15,
+          "carbohydrates": 20,
+          "fats": 0
         },
         "portionSize": "1 ciotola",
         "image": "images/snacks.jpg"
@@ -644,402 +85,404 @@
     },
     "day2": {
       "breakfast": {
-        "mealName": "Toast integrale con uova in camicia e spinaci",
-        "description": "Pane integrale tostato servito con uova in camicia e spinaci saltati.",
+        "mealName": "Toast proteico con uova e avocado",
+        "description": "Pane integrale tostato con uova strapazzate e avocado",
         "ingredients": [
-          "2 fette di pane integrale",
+          "2 fette di pane integrale ai cereali",
           "2 uova",
-          "100g spinaci freschi",
-          "1 cucchiaino di aceto",
+          "50g avocado",
+          "1 cucchiaino olio extra vergine",
           "Sale e pepe q.b.",
-          "1 cucchiaino di olio d'oliva"
+          "Peperoncino in fiocchi q.b."
         ],
         "nutrition": {
-          "calories": 350,
-          "protein": 20,
+          "calories": 400,
+          "protein": 24,
           "carbohydrates": 30,
-          "fats": 15
+          "fats": 22
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 porzione",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Pasta integrale con pomodorini e rucola",
-        "description": "Pasta integrale condita con pomodorini freschi, rucola e parmigiano.",
+        "mealName": "Riso integrale con tofu e verdure alla griglia",
+        "description": "Bowl di riso integrale con tofu marinato e verdure grigliate",
         "ingredients": [
-          "80g pasta integrale",
-          "100g pomodorini",
-          "Una manciata di rucola",
-          "1 spicchio d'aglio",
-          "1 cucchiaio di olio d'oliva",
-          "Parmigiano Reggiano grattugiato q.b.",
-          "Sale e pepe q.b."
+          "80g riso integrale",
+          "150g tofu extra-firm",
+          "200g mix verdure surgelate per wok",
+          "1 cucchiaino olio di sesamo",
+          "10ml salsa di soia a basso contenuto di sodio",
+          "Zenzero grattugiato q.b."
         ],
         "nutrition": {
-          "calories": 450,
-          "protein": 15,
-          "carbohydrates": 65,
-          "fats": 12
+          "calories": 420,
+          "protein": 25,
+          "carbohydrates": 50,
+          "fats": 14
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 bowl",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Merluzzo al vapore con verdure",
-        "description": "Filetto di merluzzo cotto al vapore servito con verdure miste.",
+        "mealName": "Frittata di albumi con spinaci e funghi",
+        "description": "Frittata leggera preparata con albumi, spinaci freschi e funghi",
         "ingredients": [
-          "150g filetto di merluzzo",
-          "200g verdure miste (broccoli, carote, zucchine)",
-          "Succo di limone",
-          "Erbe aromatiche a piacere",
+          "6 albumi",
+          "150g spinaci freschi",
+          "100g funghi champignon",
+          "30g parmigiano grattugiato",
+          "1 cucchiaino olio extra vergine",
+          "Erbe aromatiche q.b.",
           "Sale e pepe q.b."
         ],
         "nutrition": {
-          "calories": 350,
-          "protein": 30,
-          "carbohydrates": 20,
-          "fats": 10
+          "calories": 300,
+          "protein": 35,
+          "carbohydrates": 8,
+          "fats": 12
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 porzione",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Frutta secca mista",
-        "description": "Mix di noci, mandorle e nocciole non salate.",
+        "mealName": "Smoothie proteico verde",
+        "description": "Frullato verde con proteine e frutta",
         "ingredients": [
-          "30g frutta secca mista non salata"
+          "30g proteine in polvere",
+          "1 mela verde",
+          "1 manciata di spinaci freschi",
+          "Succo di limone",
+          "Acqua q.b.",
+          "Ghiaccio q.b."
         ],
         "nutrition": {
           "calories": 180,
-          "protein": 6,
-          "carbohydrates": 5,
-          "fats": 15
+          "protein": 25,
+          "carbohydrates": 15,
+          "fats": 2
         },
-        "portionSize": "1 manciata",
+        "portionSize": "1 bicchiere grande",
         "image": "images/snacks.jpg"
       }
     },
     "day3": {
       "breakfast": {
-        "mealName": "Frullato di frutta e avena",
-        "description": "Smoothie energizzante a base di frutta fresca, avena e yogurt.",
+        "mealName": "Overnight oats con cacao e banana",
+        "description": "Fiocchi d'avena preparati la sera prima con cacao, banana e yogurt greco",
         "ingredients": [
-          "1 banana",
-          "100g frutti di bosco",
-          "30g fiocchi d'avena",
-          "150g yogurt naturale",
-          "200ml latte scremato",
-          "Ghiaccio q.b."
+          "50g fiocchi d'avena",
+          "150g yogurt greco 0% grassi",
+          "1 banana media",
+          "10g cacao amaro in polvere",
+          "1 cucchiaino di miele",
+          "Cannella q.b."
         ],
         "nutrition": {
-          "calories": 400,
-          "protein": 15,
-          "carbohydrates": 70,
-          "fats": 5
+          "calories": 350,
+          "protein": 20,
+          "carbohydrates": 55,
+          "fats": 8
         },
-        "portionSize": "1 bicchiere grande",
+        "portionSize": "1 barattolo",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Insalata di pollo e avocado",
-        "description": "Insalata fresca con petto di pollo grigliato, avocado e verdure miste.",
+        "mealName": "Bowl di quinoa con tonno e verdure",
+        "description": "Bowl di quinoa con tonno al naturale e verdure fresche",
         "ingredients": [
-          "100g petto di pollo",
-          "1/2 avocado",
-          "Foglie di lattuga",
-          "Pomodorini",
-          "Cetriolo",
-          "1 cucchiaio di olio d'oliva",
+          "80g quinoa",
+          "160g tonno al naturale",
+          "200g mix verdure surgelate per wok",
+          "1 cucchiaino olio extra vergine",
           "Succo di limone",
           "Sale e pepe q.b."
         ],
         "nutrition": {
-          "calories": 450,
-          "protein": 30,
-          "carbohydrates": 20,
-          "fats": 25
+          "calories": 420,
+          "protein": 40,
+          "carbohydrates": 45,
+          "fats": 12
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 bowl",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Curry di lenticchie rosse con riso basmati",
-        "description": "Lenticchie rosse speziate in salsa di pomodoro servite con riso basmati.",
+        "mealName": "Spiedini di pollo alla coreana con riso",
+        "description": "Spiedini di pollo marinati con salsa piccante coreana e riso basmati",
         "ingredients": [
-          "80g lenticchie rosse",
-          "100g passata di pomodoro",
-          "1 cipolla",
-          "1 spicchio d'aglio",
-          "1 cucchiaino di curry in polvere",
+          "150g petto di pollo",
           "80g riso basmati",
-          "1 cucchiaino di olio d'oliva",
-          "Sale q.b."
+          "2 cucchiai di gochujang",
+          "1 cucchiaino di olio di sesamo",
+          "Cipollotto fresco",
+          "Semi di sesamo"
         ],
         "nutrition": {
-          "calories": 500,
-          "protein": 20,
-          "carbohydrates": 80,
-          "fats": 5
+          "calories": 450,
+          "protein": 38,
+          "carbohydrates": 50,
+          "fats": 12
         },
-        "portionSize": "1 piatto",
+        "portionSize": "2 spiedini con riso",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Yogurt greco con miele e semi di zucca",
-        "description": "Yogurt greco arricchito con miele e semi di zucca croccanti.",
+        "mealName": "Mix di frutta secca ed edamame",
+        "description": "Mix energetico di frutta secca e edamame sgusciati",
         "ingredients": [
-          "150g yogurt greco 0% grassi",
-          "1 cucchiaino di miele",
-          "20g semi di zucca"
+          "15g mandorle",
+          "50g edamame sgusciati",
+          "10g semi di zucca"
         ],
         "nutrition": {
-          "calories": 200,
-          "protein": 15,
-          "carbohydrates": 15,
-          "fats": 7
+          "calories": 180,
+          "protein": 12,
+          "carbohydrates": 8,
+          "fats": 14
         },
-        "portionSize": "1 coppetta",
+        "portionSize": "1 porzione",
         "image": "images/snacks.jpg"
       }
     },
     "day4": {
       "breakfast": {
-        "mealName": "Porridge di quinoa con frutta secca",
-        "description": "Porridge caldo preparato con quinoa e arricchito con frutta secca.",
+        "mealName": "Pancake proteici con frutti di bosco",
+        "description": "Pancake preparati con proteine in polvere e serviti con frutti di bosco",
         "ingredients": [
-          "50g quinoa",
-          "200ml latte di mandorla",
-          "20g uvetta",
-          "10g mandorle a fette",
-          "1 cucchiaino di miele",
-          "Cannella a piacere"
+          "30g proteine in polvere",
+          "1 uovo",
+          "30g farina d'avena",
+          "100ml latte di mandorla",
+          "100g mix frutti di bosco surgelati",
+          "1 cucchiaino di miele"
         ],
         "nutrition": {
           "calories": 350,
-          "protein": 10,
-          "carbohydrates": 55,
+          "protein": 32,
+          "carbohydrates": 40,
           "fats": 8
         },
-        "portionSize": "1 ciotola",
+        "portionSize": "3 pancake",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Wrap di tonno e verdure",
-        "description": "Tortilla integrale farcita con tonno, verdure fresche e salsa leggera.",
+        "mealName": "Bowl di riso integrale con uova e verdure",
+        "description": "Riso integrale con uova sode e verdure al vapore",
         "ingredients": [
-          "1 tortilla integrale",
-          "100g tonno al naturale",
-          "Pomodoro a fette",
-          "Cetriolo a fette",
-          "Foglie di lattuga",
-          "1 cucchiaio di yogurt greco",
-          "Succo di limone",
-          "Sale e pepe q.b."
+          "80g riso integrale",
+          "2 uova",
+          "200g mix verdure surgelate per wok",
+          "1 cucchiaino olio di sesamo",
+          "Salsa di soia a basso contenuto di sodio",
+          "Semi di sesamo"
         ],
         "nutrition": {
-          "calories": 400,
+          "calories": 420,
           "protein": 25,
-          "carbohydrates": 40,
-          "fats": 12
+          "carbohydrates": 50,
+          "fats": 16
         },
-        "portionSize": "1 wrap",
+        "portionSize": "1 bowl",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Pollo al curry con verdure",
-        "description": "Pollo speziato al curry con verdure miste servito con riso integrale.",
+        "mealName": "Salmone al forno con patate e asparagi",
+        "description": "Filetto di salmone al forno con contorno di patate e asparagi",
         "ingredients": [
-          "150g petto di pollo",
-          "200g verdure miste (peperoni, zucchine, carote)",
-          "1 cucchiaino di curry in polvere",
-          "80g riso integrale",
-          "1 spicchio d'aglio",
-          "1 cucchiaino di olio d'oliva",
-          "Sale q.b."
+          "150g filetto di salmone",
+          "150g patate",
+          "150g asparagi",
+          "1 cucchiaino olio extra vergine",
+          "Limone",
+          "Erbe aromatiche",
+          "Sale e pepe q.b."
         ],
         "nutrition": {
-          "calories": 500,
-          "protein": 30,
-          "carbohydrates": 65,
-          "fats": 10
+          "calories": 420,
+          "protein": 35,
+          "carbohydrates": 30,
+          "fats": 20
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 porzione",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Crudit\u00c3\u00a8 di verdure con salsa tzatziki",
-        "description": "Bastoncini di verdure fresche servite con salsa tzatziki leggera.",
+        "mealName": "Yogurt greco con miele e cannella",
+        "description": "Yogurt greco magro con miele e cannella",
         "ingredients": [
-          "Carote a bastoncini",
-          "Sedano a bastoncini",
-          "Peperoni a bastoncini",
-          "50g salsa tzatziki (yogurt greco, cetriolo, aglio, limone)"
+          "150g yogurt greco 0% grassi",
+          "1 cucchiaino di miele",
+          "Cannella q.b."
         ],
         "nutrition": {
-          "calories": 150,
-          "protein": 5,
-          "carbohydrates": 20,
-          "fats": 5
+          "calories": 130,
+          "protein": 15,
+          "carbohydrates": 15,
+          "fats": 0
         },
-        "portionSize": "1 piattino",
+        "portionSize": "1 ciotola",
         "image": "images/snacks.jpg"
       }
     },
     "day5": {
       "breakfast": {
-        "mealName": "Bagel integrale con salmone affumicato e formaggio spalmabile",
-        "description": "Bagel integrale tostato con salmone affumicato e formaggio spalmabile light.",
+        "mealName": "Bowl di yogurt con granola proteica",
+        "description": "Yogurt greco con granola proteica e frutta fresca",
         "ingredients": [
-          "1 bagel integrale",
-          "50g salmone affumicato",
-          "30g formaggio spalmabile light",
-          "Aneto fresco",
-          "Succo di limone"
+          "150g yogurt greco 0% grassi",
+          "30g fiocchi d'avena",
+          "15g mandorle tritate",
+          "10g semi di zucca",
+          "1 cucchiaino di miele",
+          "Cannella q.b."
         ],
         "nutrition": {
-          "calories": 400,
-          "protein": 20,
-          "carbohydrates": 50,
+          "calories": 340,
+          "protein": 25,
+          "carbohydrates": 35,
           "fats": 12
         },
-        "portionSize": "1 bagel",
+        "portionSize": "1 bowl",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Zuppa di minestrone con legumi",
-        "description": "Zuppa calda e nutriente con verdure miste e legumi.",
+        "mealName": "Wrap di tacchino e avocado",
+        "description": "Piadina integrale con tacchino, avocado e verdure",
         "ingredients": [
-          "200g verdure miste per minestrone",
-          "50g fagioli borlotti",
-          "50g ceci",
-          "Brodo vegetale q.b.",
-          "1 cucchiaino di olio d'oliva",
-          "Parmigiano Reggiano grattugiato q.b.",
-          "Sale e pepe q.b."
+          "1 piadina integrale grande",
+          "120g fettine di tacchino",
+          "50g avocado",
+          "Insalata mista",
+          "Pomodori",
+          "1 cucchiaino di senape"
         ],
         "nutrition": {
           "calories": 400,
-          "protein": 20,
-          "carbohydrates": 60,
-          "fats": 8
+          "protein": 35,
+          "carbohydrates": 35,
+          "fats": 18
         },
-        "portionSize": "1 ciotola grande",
+        "portionSize": "1 wrap",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Spiedini di tacchino e verdure",
-        "description": "Cubetti di tacchino e verdure grigliati su spiedini, serviti con couscous.",
+        "mealName": "Zuppa di miso con tofu e pak choi",
+        "description": "Zuppa giapponese con tofu, verdure e funghi shiitake",
         "ingredients": [
-          "150g tacchino a cubetti",
-          "Peperoni, zucchine, cipolle a pezzi",
-          "80g couscous integrale",
-          "Spezie a piacere (paprika, origano)",
-          "1 cucchiaino di olio d'oliva",
-          "Sale e pepe q.b."
+          "2 cucchiai di pasta di miso",
+          "150g tofu morbido",
+          "100g pak choi",
+          "30g funghi shiitake",
+          "1 cipollotto",
+          "10g alghe wakame",
+          "Zenzero fresco q.b."
         ],
         "nutrition": {
-          "calories": 500,
-          "protein": 35,
-          "carbohydrates": 60,
+          "calories": 280,
+          "protein": 20,
+          "carbohydrates": 25,
           "fats": 10
         },
-        "portionSize": "2 spiedini e couscous",
+        "portionSize": "1 zuppiera",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Smoothie di ananas e zenzero",
-        "description": "Frullato rinfrescante a base di ananas fresco e zenzero.",
+        "mealName": "Bruschetta proteica",
+        "description": "Fetta di pane integrale con hummus e pomodorini",
         "ingredients": [
-          "150g ananas fresco",
-          "200ml acqua di cocco",
-          "Pezzetto di zenzero fresco",
-          "Ghiaccio q.b."
+          "1 fetta pane integrale",
+          "50g hummus",
+          "Pomodorini",
+          "Basilico fresco",
+          "1 cucchiaino olio extra vergine"
         ],
         "nutrition": {
-          "calories": 150,
-          "protein": 1,
-          "carbohydrates": 35,
-          "fats": 0
+          "calories": 200,
+          "protein": 8,
+          "carbohydrates": 25,
+          "fats": 10
         },
-        "portionSize": "1 bicchiere",
+        "portionSize": "1 fetta",
         "image": "images/snacks.jpg"
       }
     },
     "day6": {
       "breakfast": {
-        "mealName": "Uova strapazzate con pomodoro e basilico",
-        "description": "Uova strapazzate cotte con pomodoro fresco e basilico, servite su pane tostato.",
+        "mealName": "Frullato tropicale proteico",
+        "description": "Smoothie cremoso con mango, ananas e proteine",
         "ingredients": [
-          "2 uova",
-          "1 pomodoro maturo",
-          "2 fette di pane integrale",
-          "Foglie di basilico fresco",
-          "1 cucchiaino di olio d'oliva",
-          "Sale e pepe q.b."
+          "30g proteine in polvere",
+          "100g mango surgelato",
+          "100g ananas",
+          "200ml latte di mandorla",
+          "1 cucchiaino di semi di chia",
+          "Ghiaccio q.b."
         ],
         "nutrition": {
-          "calories": 350,
-          "protein": 18,
-          "carbohydrates": 30,
-          "fats": 15
+          "calories": 320,
+          "protein": 28,
+          "carbohydrates": 40,
+          "fats": 6
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 bicchiere grande",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Insalata di farro con verdure grigliate",
-        "description": "Farro perlato mescolato con verdure grigliate e condimento leggero.",
+        "mealName": "Poke bowl di salmone",
+        "description": "Bowl con riso integrale, salmone crudo marinato e verdure",
         "ingredients": [
-          "70g farro perlato",
-          "Peperoni, zucchine, melanzane grigliate",
-          "Pomodorini",
-          "1 cucchiaio di olio d'oliva",
-          "Aceto balsamico",
-          "Sale e pepe q.b."
+          "80g riso integrale",
+          "150g salmone fresco",
+          "50g edamame sgusciati",
+          "100g cavolo rosso",
+          "50g avocado",
+          "Salsa di soia",
+          "Semi di sesamo"
         ],
         "nutrition": {
-          "calories": 450,
-          "protein": 15,
-          "carbohydrates": 65,
-          "fats": 12
+          "calories": 480,
+          "protein": 35,
+          "carbohydrates": 45,
+          "fats": 22
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 bowl",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Gnocchi di patate con salsa di pomodoro e basilico",
-        "description": "Gnocchi leggeri serviti con salsa di pomodoro fresca e basilico.",
+        "mealName": "Pizza proteica fatta in casa",
+        "description": "Base proteica con pomodoro, mozzarella light e verdure",
         "ingredients": [
-          "150g gnocchi di patate",
+          "150g impasto proteico",
+          "80g mozzarella light",
           "100g passata di pomodoro",
-          "1 spicchio d'aglio",
-          "Foglie di basilico fresco",
-          "1 cucchiaino di olio d'oliva",
-          "Parmigiano Reggiano grattugiato q.b.",
-          "Sale e pepe q.b."
+          "Verdure grigliate miste",
+          "Origano",
+          "1 cucchiaino olio extra vergine"
         ],
         "nutrition": {
-          "calories": 400,
-          "protein": 10,
-          "carbohydrates": 75,
-          "fats": 5
+          "calories": 450,
+          "protein": 35,
+          "carbohydrates": 40,
+          "fats": 18
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 pizza media",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Yogurt con granola e miele",
-        "description": "Yogurt naturale arricchito con granola croccante e un filo di miele.",
+        "mealName": "Mousse di yogurt e frutti di bosco",
+        "description": "Mousse leggera di yogurt con frutti di bosco",
         "ingredients": [
-          "150g yogurt naturale",
-          "30g granola",
-          "1 cucchiaino di miele"
+          "150g yogurt greco 0% grassi",
+          "100g mix frutti di bosco surgelati",
+          "1 cucchiaino di miele",
+          "Scaglie di mandorle"
         ],
         "nutrition": {
-          "calories": 250,
-          "protein": 8,
-          "carbohydrates": 40,
-          "fats": 7
+          "calories": 160,
+          "protein": 15,
+          "carbohydrates": 22,
+          "fats": 2
         },
         "portionSize": "1 coppetta",
         "image": "images/snacks.jpg"
@@ -1047,98 +490,84 @@
     },
     "day7": {
       "breakfast": {
-        "mealName": "Crepes integrali con frutta fresca",
-        "description": "Crepes leggere preparate con farina integrale e servite con frutta fresca.",
+        "mealName": "Uova in camicia su avocado toast",
+        "description": "Toast integrale con avocado e uova in camicia",
         "ingredients": [
-          "50g farina integrale",
-          "1 uovo",
-          "100ml latte scremato",
-          "Frutta fresca assortita (fragole, mirtilli, banana)",
-          "1 cucchiaino di miele"
+          "2 fette pane integrale",
+          "2 uova",
+          "50g avocado",
+          "Peperoncino in fiocchi",
+          "1 cucchiaino olio extra vergine",
+          "Sale e pepe q.b."
         ],
         "nutrition": {
-          "calories": 350,
-          "protein": 12,
-          "carbohydrates": 60,
-          "fats": 7
+          "calories": 380,
+          "protein": 22,
+          "carbohydrates": 30,
+          "fats": 20
         },
-        "portionSize": "2 crepes",
+        "portionSize": "1 porzione",
         "image": "images/breakfast.jpg"
       },
       "lunch": {
-        "mealName": "Piadina integrale con hummus e verdure grigliate",
-        "description": "Piadina integrale farcita con hummus fatto in casa e verdure grigliate.",
+        "mealName": "Insalata di quinoa alla mediterranea",
+        "description": "Quinoa con verdure grigliate, olive e feta",
         "ingredients": [
-          "1 piadina integrale",
-          "50g hummus",
-          "Peperoni e zucchine grigliate",
-          "Foglie di rucola",
-          "Sale e pepe q.b."
+          "80g quinoa",
+          "Mix verdure grigliate",
+          "30g feta light",
+          "10g olive nere",
+          "Pomodorini",
+          "1 cucchiaino olio extra vergine",
+          "Basilico fresco"
         ],
         "nutrition": {
-          "calories": 400,
-          "protein": 12,
-          "carbohydrates": 50,
-          "fats": 15
+          "calories": 380,
+          "protein": 15,
+          "carbohydrates": 45,
+          "fats": 16
         },
-        "portionSize": "1 piadina",
+        "portionSize": "1 porzione",
         "image": "images/lunch.jpg"
       },
       "dinner": {
-        "mealName": "Bistecca di tonno alla griglia con insalata mista",
-        "description": "Bistecca di tonno fresco grigliata servita con insalata mista.",
+        "mealName": "Spezzatino di tacchino al curry",
+        "description": "Spezzatino leggero con curry e riso basmati",
         "ingredients": [
-          "150g bistecca di tonno fresco",
-          "Foglie di lattuga",
-          "Pomodorini",
-          "Cetriolo",
-          "1 cucchiaio di olio d'oliva",
-          "Succo di limone",
-          "Sale e pepe q.b."
+          "150g tacchino a bocconcini",
+          "80g riso basmati",
+          "200g mix verdure surgelate per wok",
+          "Curry in polvere",
+          "200ml latte di cocco light",
+          "1 cucchiaino olio di cocco"
         ],
         "nutrition": {
           "calories": 450,
-          "protein": 35,
-          "carbohydrates": 10,
-          "fats": 25
+          "protein": 40,
+          "carbohydrates": 45,
+          "fats": 15
         },
-        "portionSize": "1 piatto",
+        "portionSize": "1 porzione",
         "image": "images/dinner.jpg"
       },
       "snacks": {
-        "mealName": "Gelato allo yogurt fatto in casa",
-        "description": "Gelato leggero preparato con yogurt greco e frutta congelata.",
+        "mealName": "Energy balls proteiche",
+        "description": "Palline energetiche con datteri e frutta secca",
         "ingredients": [
-          "150g yogurt greco 0% grassi",
-          "100g frutta congelata (fragole, lamponi)",
-          "1 cucchiaino di miele"
+          "30g datteri secchi",
+          "20g mandorle",
+          "10g proteine in polvere",
+          "5g cacao amaro",
+          "Cannella q.b."
         ],
         "nutrition": {
           "calories": 200,
-          "protein": 15,
+          "protein": 10,
           "carbohydrates": 25,
-          "fats": 0
+          "fats": 8
         },
-        "portionSize": "1 coppetta",
+        "portionSize": "3 palline",
         "image": "images/snacks.jpg"
-      },
-      "alternativeDinner": {
-        "mealName": "Frittata di verdure al forno",
-        "description": "Frittata leggera cotta al forno con verdure miste.",
-        "ingredients": [
-          "3 uova",
-          "200g verdure miste (spinaci, peperoni, cipolle)",
-          "30g formaggio grattugiato light",
-          "Sale e pepe q.b."
-        ],
-        "nutrition": {
-          "calories": 350,
-          "protein": 25,
-          "carbohydrates": 10,
-          "fats": 22
-        },
-        "portionSize": "1 fetta",
-        "image": "images/alternativeDinner.jpg"
       }
     }
   }
