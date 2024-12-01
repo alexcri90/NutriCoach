@@ -138,17 +138,17 @@ header {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 10% from the top and centered */
+    margin: 5% auto; /* Reduced top margin */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 90%; /* Slightly wider on mobile */
+    max-width: 800px;
     border-radius: 8px;
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 800px; /* Adjust as needed */
-    max-height: 80vh; /* Limit the height to 80% of the viewport height */
-    overflow-y: auto; /* Allow scrolling if content is too long */
+    max-height: 90vh; /* Increased max height */
+    overflow-y: auto;
 }
 
 .meal-details {
@@ -287,15 +287,17 @@ header {
 
 /* Shopping cart button in meal modal */
 .add-to-cart-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
+    position: static; /* Changed from absolute */
+    margin-top: 20px;
+    padding: 12px 24px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Maximum width for larger screens */
+    align-self: center; /* Center the button */
 }
 
 .add-to-cart-button:hover {
@@ -305,29 +307,59 @@ header {
 /* Shopping list link in header */
 .shopping-list-link {
     position: fixed;
-    top: 20px;
+    top: auto;
+    bottom: 20px;
     right: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px; /* More rounded corners for better mobile aesthetics */
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
 .shopping-list-link:hover {
     background-color: #218838;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
     .meal-details {
-        flex-direction: column-reverse; /* Stack vertically on smaller screens */
+        flex-direction: column-reverse;
+        padding-bottom: 70px; /* Add padding to prevent button overlap */
     }
 
     .meal-image-container {
         width: 100%;
-        height: 300px;
+        height: 200px; /* Reduced height on mobile */
         margin-bottom: 20px;
+    }
+
+    .shopping-list-link {
+        padding: 10px 20px; /* Slightly smaller padding on mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .modal-content {
+        margin: 0; /* Full screen on mobile */
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .add-to-cart-button {
+        position: fixed; /* Fixed position at bottom on mobile */
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: none;
+        z-index: 1000;
+        border-radius: 25px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 }
 
